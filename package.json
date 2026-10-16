@@ -1,0 +1,11 @@
+{
+  "name": "mishmash-web",
+  "private": true,
+  "description": "Web kapely MISH MASH – statický web, npm je potřeba jen pro skript na zmenšování fotek (tools/fotky.js).",
+  "scripts": {
+    "fotky": "node tools/fotky.js"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.1"
+  }
+}
