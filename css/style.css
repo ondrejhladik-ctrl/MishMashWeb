@@ -723,7 +723,6 @@ a.gig:hover .gig-cta { background: var(--on-a); color: var(--a); border-color: v
     position: relative;
     display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 30px var(--gap); align-items: center;
     padding: clamp(46px, calc(100 * var(--u)), 130px) 0;
-    border-top: var(--line) solid currentColor;
 }
 .member:first-child { border-top: 0; }
 .member-bg {
