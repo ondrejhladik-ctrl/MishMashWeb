@@ -753,7 +753,7 @@ a.gig:hover .gig-cta { background: var(--on-a); color: var(--a); border-color: v
 .member-name {
     margin-top: 16px;
     font-size: clamp(46px, calc(96 * var(--u)), 124px);
-    font-weight: 900; line-height: .86; letter-spacing: -.05em; text-transform: uppercase;
+    font-weight: 900; line-height: 1; letter-spacing: -.04em; word-spacing: .12em; text-transform: uppercase;
     overflow-wrap: normal; hyphens: none;
 }
 .member-role {
@@ -761,7 +761,8 @@ a.gig:hover .gig-cta { background: var(--on-a); color: var(--a); border-color: v
     padding: 8px 14px; background: var(--b); color: var(--on-b);
     font-size: 13px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase;
 }
-.member-bio { margin-top: 18px; max-width: 34ch; font-size: clamp(18px, calc(23 * var(--u)), 25px); font-weight: 600; line-height: 1.25; }
+.member-bio { margin-top: 18px; max-width: 46ch; font-size: clamp(16px, calc(19 * var(--u)), 21px); font-weight: 500; line-height: 1.45; text-align: left; }
+.member-bio + .member-bio { margin-top: .8em; }
 
 /* ALBA */
 .album { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px var(--gap); align-items: center; }
