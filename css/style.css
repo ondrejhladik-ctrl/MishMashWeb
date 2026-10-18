@@ -1202,3 +1202,7 @@ html.has-cursor [data-cursor], html.has-cursor [data-cursor] * { cursor: none; }
 
 /* čtverečky v rozích (vertex) vypnuté všude */
 .vbox::after { content: none !important; display: none !important; }
+
+/* nadpis „Členové“ na úvodu stejně velký jako řádky pod ním */
+.sec-about .big-title { font-size: clamp(38px, 8.5vw, 158px); font-weight: 850; }
+@media (max-width: 860px) { .sec-about .big-title { font-size: clamp(30px, 10.4vw, 64px); } }
