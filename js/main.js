@@ -158,7 +158,7 @@
     var menuInner = menu ? qs('.menu-inner', menu) : null;
     var toggles = qsa('[data-menu-toggle]');
     var creatureBox = document.getElementById('creature');
-    var isOpen = false, openT = 0, closeT = 0, leaving = false, lastToggle = null, preloaded = false, openY = 0;
+    var isOpen = false, openT = 0, closeT = 0, leaving = false, lastToggle = null, preloaded = false, openY = 0, openedAt = 0, openedByHover = false;
 
     function setGround(pair) {
         if (!menu) return;
@@ -172,6 +172,7 @@
         if (v) {
             var y = window.scrollY, h = window.innerHeight;
             openY = y;
+            openedAt = Date.now();
             // osa otáčení = pod spodním okrajem okna (aby šly přečíst všechny řádky menu)
             site.style.transformOrigin = MOBILE.matches ? ('0px ' + y + 'px') : ('50% ' + Math.round(y + h * 1.15) + 'px');
             if (lenis) lenis.stop();
@@ -238,11 +239,13 @@
     if (menu && site) {
         if (HOVER) {
             menu.addEventListener('mouseenter', function () {
-                if (!isOpen && !MOBILE.matches && !leaving) openT = setTimeout(function () { setOpen(true); }, 140);
+                if (!isOpen && !MOBILE.matches && !leaving) openT = setTimeout(function () { openedByHover = true; setOpen(true); }, 140);
             });
             menu.addEventListener('mouseleave', function () { clearTimeout(openT); });
             site.addEventListener('mouseenter', function () {
-                if (isOpen && !leaving && !MOBILE.matches) closeT = setTimeout(function () { setOpen(false); }, 320);
+                // zavírat najetím jen když se menu otevřelo najetím na rail a list už dojel
+                // (při otevření tlačítkem MENU by se jinak list pod stojícím kurzorem točil tam a zpět)
+                if (isOpen && openedByHover && !leaving && !MOBILE.matches && Date.now() - openedAt > 900) closeT = setTimeout(function () { setOpen(false); }, 320);
             });
             site.addEventListener('mouseleave', function () { clearTimeout(closeT); });
         }
@@ -258,6 +261,7 @@
             b.addEventListener('click', function (e) {
                 e.stopPropagation();
                 lastToggle = b;
+                openedByHover = false;
                 setOpen(!isOpen, e.detail === 0);       // detail 0 = ovládání klávesnicí → přesunout fokus
             });
         });
