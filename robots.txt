@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://mish-mash.cz/sitemap.xml
