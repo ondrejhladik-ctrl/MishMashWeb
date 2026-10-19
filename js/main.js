@@ -869,6 +869,13 @@
             lbImg.src = it.dataset.full || im.currentSrc || im.src;
             lbImg.alt = im.alt;
             lbCount.textContent = pad2(cur + 1) + ' / ' + pad2(items.length);
+            // kdo fotil: atribut u fotky, jinak výchozí autor galerie
+            var credit = qs('.lb-credit', lb), name = it.dataset.author || gal.dataset.author;
+            if (credit) {
+                credit.hidden = !name;
+                var link = qs('a', credit);
+                if (link && name) { link.textContent = name; link.href = it.dataset.authorUrl || gal.dataset.authorUrl || '#'; }
+            }
         }
         function openLb(i) {
             back = document.activeElement;

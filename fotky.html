@@ -137,7 +137,8 @@
                 </div>
             </div>
             <!-- Nové fotky: node tools/fotky.js "složka" → přidej další <button class="ph"> se stejnou strukturou -->
-            <div class="gallery" data-gallery>
+            <!-- Autor fotek: výchozí pro celou galerii; u jednotlivé fotky jde přepsat atributy data-author / data-author-url na <button class="ph"> -->
+            <div class="gallery" data-gallery data-author="Ondřej Hladík" data-author-url="https://www.instagram.com/ondrej_.hladik/">
                 <button class="ph" type="button" data-full="img/foto/4126-1600.webp" data-w="960" data-h="1280" data-cursor="Táhni" aria-label="Zvětšit fotku 1: Bubeník s brýlemi se dívá vzhůru, v popředí činel"><img src="img/foto/4126-960.webp" srcset="img/foto/4126-480.webp 480w, img/foto/4126-960.webp 960w" sizes="(max-width: 860px) 50vw, 25vw" width="960" height="1280" alt="Bubeník s brýlemi se dívá vzhůru, v popředí činel" loading="lazy" decoding="async"></button>
                 <button class="ph" type="button" data-full="img/foto/4295-1600.webp" data-w="960" data-h="721" data-cursor="Táhni" aria-label="Zvětšit fotku 2: Kytarista v pohybu, rozmazaný záběr"><img src="img/foto/4295-960.webp" srcset="img/foto/4295-480.webp 480w, img/foto/4295-960.webp 960w" sizes="(max-width: 860px) 50vw, 25vw" width="960" height="721" alt="Kytarista v pohybu, rozmazaný záběr" loading="lazy" decoding="async"></button>
                 <button class="ph" type="button" data-full="img/foto/4066-1600.webp" data-w="960" data-h="720" data-cursor="Táhni" aria-label="Zvětšit fotku 3: Bubeník za soupravou ve zkušebně"><img src="img/foto/4066-960.webp" srcset="img/foto/4066-480.webp 480w, img/foto/4066-960.webp 960w" sizes="(max-width: 860px) 50vw, 25vw" width="960" height="720" alt="Bubeník za soupravou ve zkušebně" loading="lazy" decoding="async"></button>
@@ -202,6 +203,7 @@
     <!-- LIGHTBOX (mimo #site, aby fungoval i při odklopeném listu) -->
     <div class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Zvětšená fotka">
         <img class="lb-img" alt="">
+        <p class="lb-credit">Foto: <a href="https://www.instagram.com/ondrej_.hladik/" target="_blank" rel="noopener">Ondřej Hladík</a></p>
         <span class="lb-count">01 / 23</span>
         <button class="lb-btn lb-close" type="button" aria-label="Zavřít">✕</button>
         <button class="lb-btn lb-prev" type="button" aria-label="Předchozí fotka">←</button>

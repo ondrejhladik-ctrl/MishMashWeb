@@ -893,6 +893,9 @@ a.gig:hover .gig-cta { background: var(--on-a); color: var(--a); border-color: v
 .lb-close { top: 20px; right: 20px; }
 .lb-prev { left: 20px; top: 50%; margin-top: -32px; }
 .lb-next { right: 20px; top: 50%; margin-top: -32px; }
+.lb-credit { position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%); margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+.lb-credit a { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+.lb-credit a:hover { color: var(--b); }
 .lb-count { position: absolute; left: 24px; top: 30px; font-size: 13px; font-weight: 800; letter-spacing: .1em; }
 
 /* děkovná stránka / 404 */
