@@ -732,6 +732,12 @@
             node.style.setProperty('--px', ((r.top + r.height / 2 - window.innerHeight / 2) * k).toFixed(1) + 'px');
         });
     });
+    // bez myši (mobil): druhá fotka člena se ukáže, když fotka dojede doprostřed obrazovky
+    qsa('.member').forEach(function (m) {
+        var photo = qs('.member-photo', m);
+        if (!photo || !qs('.m-alt', m)) return;
+        inView(photo, function (v) { m.classList.toggle('is-alt', v && MOBILE.matches); }, { rootMargin: '-40% 0px -40% 0px' });
+    });
 
 
     /* ─── FOTKY – hromada (táhni myší) ⇄ mřížka, lightbox ─── */
