@@ -13,13 +13,10 @@
      pozn:     'Vstup zdarma'    ukáže se místo tlačítka, když není odkaz – nepovinné
      ukazka:   true              jen pro ukázková data (zobrazí štítek „ukázka“) – u skutečných koncertů vynech
 
-   !!! NÍŽE JSOU UKÁZKOVÁ DATA – přepiš je skutečnými koncerty (nebo je smaž) !!!
    Když nebude žádný koncert, web ukáže „Nové koncerty brzy oznámíme“ + odkaz na Instagram. */
 
 window.MM_KONCERTY = [
-    { datum: '2026-11-13', cas: '20:00', mesto: 'Město', misto: 'Název klubu', pozn: 'Vstupenky brzy', ukazka: true },
-    { datum: '2026-11-28', cas: '21:00', mesto: 'Město', misto: 'Název klubu', pozn: 'Info brzy', ukazka: true },
-    { datum: '2026-12-12', cas: '19:30', mesto: 'Město', misto: 'Název akce', pozn: 'Vstup zdarma', ukazka: true },
-    { datum: '2026-09-19', cas: '20:00', mesto: 'Město', misto: 'Název klubu', ukazka: true },
-    { datum: '2026-06-20', cas: '18:00', mesto: 'Město', misto: 'Název festivalu', ukazka: true }
+    // Skutečné koncerty – ZATÍM NEZVEŘEJŇOVAT. Až bude možné, smaž „//“ na začátku řádku.
+    // { datum: '2026-12-05', cas: '19:00', mesto: 'Praha', misto: 'Křest EP – Kampus Hybernská', pozn: 'Info brzy' },
+    // { datum: '2027-01-09', mesto: '', misto: 'Support na křtu kapely Finers', pozn: 'Info brzy' },
 ];
