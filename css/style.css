@@ -158,6 +158,12 @@ html.menu-open .menu-row:focus-visible { color: var(--on-b); outline: 0; }
 html.menu-open .menu-row:hover .menu-title,
 html.menu-open .menu-row:focus-visible .menu-title { font-style: italic; transform: translateX(calc(26 * var(--u))); }
 
+/* dočasně vypnutá položka (Alba do vydání EP): přeškrtnutá a nejde otevřít */
+.is-off { pointer-events: none; cursor: default; }
+.is-off .menu-title, .is-off .ix-title, .is-off .roll > span, .ft-nav .is-off {
+    text-decoration: line-through; text-decoration-thickness: .1em;
+}
+
 .menu-foot {
     position: absolute;
     left: calc(160 * var(--u)); bottom: calc(34 * var(--u));
