@@ -870,7 +870,7 @@ a.gig:hover .gig-cta { background: var(--on-a); color: var(--a); border-color: v
 .gallery:not(.is-ready) { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
 .gallery:not(.is-ready) .ph { position: relative; width: auto; transform: none; }
 
-.gal-credit { margin-top: clamp(28px, calc(48 * var(--u)), 60px); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--a); }
+.gal-credit { position: absolute; left: var(--pad); bottom: 16px; margin: 0; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--a); }
 .gal-credit a:hover { color: var(--ink); }
 .lightbox {
     position: fixed; inset: 0; z-index: 4000;
