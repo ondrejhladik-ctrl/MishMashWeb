@@ -953,10 +953,9 @@
        Stejný nástroj jako na webu Live District: statický web sám maily neposílá,
        odeslání řeší Web3Forms (zdarma, bez účtu). Po úspěchu → stránka odeslano.html.
        KAM CHODÍ MAILY = přístupový klíč ACCESS_KEY níže:
-         teď je tu stejný klíč jako u Live District → maily chodí na ondrejhladik7@gmail.com.
-         Až mají poptávky chodit kapele: na https://web3forms.com zadej e-mail kapely,
-         klíč ti přijde do mailu → vlož ho sem. */
-    var ACCESS_KEY = 'a121576d-a9b9-4a9d-8feb-2aac65e0d819';
+         vlastní formulář „MISH MASH“ v dashboardu Web3Forms → příjemce mishmash.off@gmail.com
+         (příjemce se mění v nastavení formuláře na web3forms.com, ne tady). */
+    var ACCESS_KEY = 'c2b056bd-821c-4cb2-830a-1b391c78838e';
 
     function autosize(input) {     // políčka ve větě rostou podle textu
         var field = input.closest('.ml-field');
