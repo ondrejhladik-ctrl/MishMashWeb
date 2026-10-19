@@ -742,7 +742,9 @@
         function canPile() { return !MOBILE.matches; }
         var toggle = btns.length ? btns[0].closest('.gal-toggle') : null;
         function syncToggle() { if (toggle) toggle.style.display = ''; }   // přepínač je vidět vždy
-        var mode = canPile() ? 'pile' : 'grid', pos = [], z = 10, first = true;
+        var mode = canPile() ? 'pile' : 'grid', pos = [], z = items.length + 10, first = true;
+        // první fotky v HTML leží v hromadě navrchu
+        items.forEach(function (it, i) { it.style.zIndex = items.length - i; });
         syncToggle();
         function rnd(n) { var x = Math.sin(n * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); }
         function ratio(it) { return (+it.dataset.h || 3) / (+it.dataset.w || 4); }
