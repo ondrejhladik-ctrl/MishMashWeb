@@ -1178,8 +1178,9 @@ html.has-cursor [data-cursor], html.has-cursor [data-cursor] * { cursor: none; }
     .hero-lineup, .hero-hint { display: none; }
     .hero-bottom { grid-template-columns: 1fr; }
     .hero-bottom .chip { justify-self: start; }
-    .statement { font-size: clamp(30px, 10.4vw, 64px); }
-    .st-line { white-space: normal; }
+    /* řádky s fotkou se nezalamují – písmo se zmenší tak, aby se nejdelší řádek („[foto] klávesy, zpěv“ ≈ 8,7 em) vešel */
+    .statement { font-size: min(64px, calc((100vw - 76px) / 8.8)); }
+    .st-line { white-space: nowrap; }
     .st-i1, .st-i2, .st-i3 { padding-left: 0; }
     .st-r { text-align: left; }
     .about-side, .about-text { grid-column: 1 / -1; }
@@ -1236,4 +1237,4 @@ html.has-cursor [data-cursor], html.has-cursor [data-cursor] * { cursor: none; }
 
 /* nadpis „Členové“ na úvodu stejně velký jako řádky pod ním */
 .sec-about .big-title { font-size: clamp(38px, 8.5vw, 158px); font-weight: 850; }
-@media (max-width: 860px) { .sec-about .big-title { font-size: clamp(30px, 10.4vw, 64px); } }
+@media (max-width: 860px) { .sec-about .big-title { font-size: min(64px, calc((100vw - 76px) / 8.8)); } }
