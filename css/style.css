@@ -818,11 +818,12 @@ a.gig:hover .gig-cta { background: var(--on-a); color: var(--a); border-color: v
 .vinyl-label svg { width: 46%; fill: var(--b); }
 .album.is-in .vinyl, .album:hover .vinyl { left: 38%; }
 .album.is-in .vinyl-disc, .album:hover .vinyl-disc { animation-play-state: running; }
-.album-info { grid-column: 8 / span 5; }
+.album-info { grid-column: 8 / span 5; text-align: right; }
+.album-info .album-text { margin-left: auto; }
 .album-title {
     margin-top: 14px;
     font-size: clamp(64px, calc(170 * var(--u)), 210px);
-    font-weight: 900; line-height: .82; letter-spacing: -.06em; text-transform: uppercase;
+    font-weight: 900; line-height: 1; letter-spacing: -.06em; text-transform: uppercase;
 }
 .album-meta { margin-top: 28px; border-top: var(--line) solid currentColor; }
 .album-meta div { display: flex; justify-content: space-between; gap: 20px; padding: 12px 0; border-bottom: 1px solid currentColor; }
