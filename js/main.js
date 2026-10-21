@@ -380,7 +380,7 @@
                 setTimeout(function () {
                     if (intro.parentNode) intro.parentNode.removeChild(intro);
                     doc.classList.add('no-intro');
-                }, 1100);
+                }, 1600);
             }, 140);
         }
         requestAnimationFrame(tick);

@@ -1106,16 +1106,24 @@ html.has-cursor [data-cursor], html.has-cursor [data-cursor] * { cursor: none; }
 .intro { position: fixed; inset: 0; z-index: 4800; display: none; pointer-events: none; }
 .js .intro { display: block; }
 .no-intro .intro { display: none; }
+/* černé pozadí zůstane, dokud loga neodjedou; pak zmizí přes blur (pod ním už dojíždí stránka) */
+.intro::before {
+    content: ""; position: absolute; inset: 0;
+    background: var(--black);
+    -webkit-backdrop-filter: blur(28px); backdrop-filter: blur(28px);
+    transition: opacity .65s ease .8s;
+}
+.intro.is-out::before { opacity: 0; }
 .intro-half {
     position: absolute; left: 0; right: 0; height: 50.2%;
     display: flex; justify-content: center;
-    background: var(--black);
-    transition: transform 1s var(--ease);
+    transition: transform 1s var(--ease), filter .8s ease, opacity .8s ease .15s;
 }
 .intro-top { top: 0; align-items: flex-end; padding-bottom: 1.25vw; }
 .intro-bot { bottom: 0; align-items: flex-start; padding-top: 1.25vw; }
 .intro-half svg { width: min(80vw, 1180px); height: auto; overflow: visible; }
 .intro .duo-a, .intro .duo-b { transition: none; }
+.intro.is-out .intro-half { filter: blur(16px); opacity: 0; }
 .intro.is-out .intro-top { transform: translateY(-101%); }
 .intro.is-out .intro-bot { transform: translateY(101%); }
 .intro-count, .intro-tag {
