@@ -36,7 +36,7 @@
 
     /* ─── BAREVNÉ PÁRY (stejné hodnoty jako v CSS = varianty loga) ─── */
     var PAIRS = ['pink', 'blue', 'lime', 'mint', 'red', 'rose'];
-    var PAGE_PAIR = { '': 'pink', index: 'pink', koncerty: 'blue', clenove: 'lime', alba: 'mint', fotky: 'red', poptavka: 'rose', odeslano: 'pink' };
+    var PAGE_PAIR = { '': 'pink', index: 'pink', koncerty: 'blue', clenove: 'lime', releasy: 'mint', fotky: 'red', poptavka: 'rose', odeslano: 'pink' };
     function slug(url) { return url.pathname.split('/').pop().replace(/\.html?$/i, ''); }
     var IG = 'https://www.instagram.com/mish.mash.official/';
 
