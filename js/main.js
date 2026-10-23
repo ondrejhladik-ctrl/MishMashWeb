@@ -38,8 +38,8 @@
     var PAIRS = ['pink', 'blue', 'lime', 'mint', 'red', 'rose'];
     var PAGE_PAIR = { '': 'pink', index: 'pink', koncerty: 'blue', clenove: 'lime', releasy: 'mint', fotky: 'red', poptavka: 'rose', odeslano: 'pink' };
     // stará adresa s .html (např. z Googlu) → v liště ukázat čistou adresu bez .html
-    if (/.html$/i.test(location.pathname) && /(^|.)mish-mash.cz$/.test(location.hostname)) {
-        try { history.replaceState(null, '', location.pathname.replace(/(index)?.html$/i, '') + location.search + location.hash); } catch (e) {}
+    if (/\.html$/i.test(location.pathname) && /(^|\.)mish-mash\.cz$/.test(location.hostname)) {
+        try { history.replaceState(null, '', location.pathname.replace(/(index)?\.html$/i, '') + location.search + location.hash); } catch (e) {}
     }
     function slug(url) { return url.pathname.split('/').pop().replace(/\.html?$/i, ''); }
     var IG = 'https://www.instagram.com/mish.mash.official/';
