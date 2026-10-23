@@ -37,6 +37,10 @@
     /* ─── BAREVNÉ PÁRY (stejné hodnoty jako v CSS = varianty loga) ─── */
     var PAIRS = ['pink', 'blue', 'lime', 'mint', 'red', 'rose'];
     var PAGE_PAIR = { '': 'pink', index: 'pink', koncerty: 'blue', clenove: 'lime', releasy: 'mint', fotky: 'red', poptavka: 'rose', odeslano: 'pink' };
+    // stará adresa s .html (např. z Googlu) → v liště ukázat čistou adresu bez .html
+    if (/.html$/i.test(location.pathname) && /(^|.)mish-mash.cz$/.test(location.hostname)) {
+        try { history.replaceState(null, '', location.pathname.replace(/(index)?.html$/i, '') + location.search + location.hash); } catch (e) {}
+    }
     function slug(url) { return url.pathname.split('/').pop().replace(/\.html?$/i, ''); }
     var IG = 'https://www.instagram.com/mish.mash.official/';
 
@@ -951,7 +955,7 @@
 
     /* ─── FORMULÁŘ → ODESLAT NA MAIL (Web3Forms) ───
        Stejný nástroj jako na webu Live District: statický web sám maily neposílá,
-       odeslání řeší Web3Forms (zdarma, bez účtu). Po úspěchu → stránka odeslano.html.
+       odeslání řeší Web3Forms (zdarma, bez účtu). Po úspěchu → stránka odeslano (odeslano.html).
        KAM CHODÍ MAILY = přístupový klíč ACCESS_KEY níže:
          vlastní formulář „MISH MASH“ v dashboardu Web3Forms → příjemce mishmash.off@gmail.com
          (příjemce se mění v nastavení formuláře na web3forms.com, ne tady). */
@@ -1040,7 +1044,7 @@
             fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Accept': 'application/json' }, body: data })
                 .then(function (r) { return r.json(); })
                 .then(function (res) {
-                    if (res && res.success) leave(new URL('odeslano.html', window.location.href).href);
+                    if (res && res.success) leave(new URL('odeslano', window.location.href).href);
                     else fail('Odeslání se nepovedlo. Zkus to prosím znovu, nebo nám napiš na Instagram.');
                 })
                 .catch(function () { fail('Odeslání se nepovedlo – zkontroluj připojení a zkus to znovu.'); });

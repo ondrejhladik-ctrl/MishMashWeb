@@ -2,9 +2,9 @@
 <!-- Mapa webu pro Google. Úvod první, pak podstránky v pořadí důležitosti. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://mish-mash.cz/</loc><lastmod>2026-10-23</lastmod><priority>1.0</priority></url>
-  <url><loc>https://mish-mash.cz/koncerty.html</loc><lastmod>2026-10-19</lastmod><priority>0.9</priority></url>
-  <url><loc>https://mish-mash.cz/clenove.html</loc><lastmod>2026-10-19</lastmod><priority>0.8</priority></url>
-  <url><loc>https://mish-mash.cz/releasy.html</loc><lastmod>2026-10-21</lastmod><priority>0.8</priority></url>
-  <url><loc>https://mish-mash.cz/fotky.html</loc><lastmod>2026-10-19</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mish-mash.cz/poptavka.html</loc><lastmod>2026-10-19</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mish-mash.cz/koncerty</loc><lastmod>2026-10-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mish-mash.cz/clenove</loc><lastmod>2026-10-23</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mish-mash.cz/releasy</loc><lastmod>2026-10-23</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mish-mash.cz/fotky</loc><lastmod>2026-10-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mish-mash.cz/poptavka</loc><lastmod>2026-10-23</lastmod><priority>0.7</priority></url>
 </urlset>
