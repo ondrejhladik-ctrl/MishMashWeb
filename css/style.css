@@ -780,6 +780,7 @@ a.gig:hover .gig-cta { background: var(--on-a); color: var(--a); border-color: v
 
 /* ALBA */
 .album { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px var(--gap); align-items: center; }
+.album + .album { margin-top: clamp(64px, calc(130 * var(--u)), 170px); }
 .album-art { grid-column: 1 / span 6; position: relative; aspect-ratio: 1; max-width: 640px; }
 .sleeve {
     position: absolute; left: 0; top: 0; bottom: 0; z-index: 2;
