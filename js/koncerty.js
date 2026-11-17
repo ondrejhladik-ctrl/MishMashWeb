@@ -16,7 +16,8 @@
    Když nebude žádný koncert, web ukáže „Nové koncerty brzy oznámíme“ + odkaz na Instagram. */
 
 window.MM_KONCERTY = [
+    { datum: '2026-12-14', cas: '19:00', mesto: 'Praha', misto: 'Křest EP Pohár emocí – Kampus Hybernská', odkaz: 'https://www.kampushybernska.cz/program/hyb4-hudba-mish-mash-krest-ep-pohar-emoci', tlacitko: 'Více info' },
+
     // ZATÍM SCHOVANÉ – až bude možné, smaž „//“ na začátku řádku:
-    // { datum: '2026-12-05', cas: '19:00', mesto: 'Praha', misto: 'Křest EP – Kampus Hybernská', pozn: 'Info brzy' },
     // { datum: '2027-01-09', mesto: '', misto: 'Support na křtu kapely Finers', pozn: 'Info brzy' },
 ];
